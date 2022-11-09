@@ -1,0 +1,383 @@
+{
+	"info": {
+		"_postman_id": "e9915244-3c1a-481d-aada-8103ccc82de3",
+		"name": "Go Learn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6067785"
+	},
+	"item": [
+		{
+			"name": "get gorillas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000",
+					"host": [
+						"localhost"
+					],
+					"port": "8000"
+				}
+			},
+			"response": [
+				{
+					"name": "before update & delete",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000",
+							"host": [
+								"localhost"
+							],
+							"port": "8000"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 09 Nov 2022 16:13:49 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "484"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 1,\n        \"name\": \"Harambe\",\n        \"age\": 21,\n        \"weight\": 150,\n        \"gender\": true,\n        \"CreatedAt\": \"2022-11-09T23:13:23.9954508+07:00\",\n        \"UpdatedAt\": \"2022-11-09T23:13:23.9954508+07:00\"\n    },\n    {\n        \"ID\": 2,\n        \"name\": \"Harambe Jr\",\n        \"age\": 10,\n        \"weight\": 100,\n        \"gender\": true,\n        \"CreatedAt\": \"2022-11-09T23:13:35.0904413+07:00\",\n        \"UpdatedAt\": \"2022-11-09T23:13:35.0904413+07:00\"\n    },\n    {\n        \"ID\": 3,\n        \"name\": \"Harambe The 3rd\",\n        \"age\": 4,\n        \"weight\": 30,\n        \"gender\": true,\n        \"CreatedAt\": \"2022-11-09T23:13:45.9011665+07:00\",\n        \"UpdatedAt\": \"2022-11-09T23:13:45.9011665+07:00\"\n    }\n]"
+				},
+				{
+					"name": "after update",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000",
+							"host": [
+								"localhost"
+							],
+							"port": "8000"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 09 Nov 2022 16:27:48 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "480"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 1,\n        \"name\": \"Harambe\",\n        \"age\": 21,\n        \"weight\": 150,\n        \"gender\": true,\n        \"CreatedAt\": \"2022-11-09T23:13:23.9954508+07:00\",\n        \"UpdatedAt\": \"2022-11-09T23:13:23.9954508+07:00\"\n    },\n    {\n        \"ID\": 2,\n        \"name\": \"Harambe Jr (Updated)\",\n        \"age\": 15,\n        \"weight\": 99,\n        \"gender\": true,\n        \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n        \"UpdatedAt\": \"2022-11-09T23:27:36.9333765+07:00\"\n    },\n    {\n        \"ID\": 3,\n        \"name\": \"Harambe The 3rd\",\n        \"age\": 4,\n        \"weight\": 30,\n        \"gender\": true,\n        \"CreatedAt\": \"2022-11-09T23:13:45.9011665+07:00\",\n        \"UpdatedAt\": \"2022-11-09T23:13:45.9011665+07:00\"\n    }\n]"
+				},
+				{
+					"name": "after delete",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000",
+							"host": [
+								"localhost"
+							],
+							"port": "8000"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 09 Nov 2022 16:28:51 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "316"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 1,\n        \"name\": \"Harambe\",\n        \"age\": 21,\n        \"weight\": 150,\n        \"gender\": true,\n        \"CreatedAt\": \"2022-11-09T23:13:23.9954508+07:00\",\n        \"UpdatedAt\": \"2022-11-09T23:13:23.9954508+07:00\"\n    },\n    {\n        \"ID\": 2,\n        \"name\": \"Harambe Jr (Updated)\",\n        \"age\": 15,\n        \"weight\": 99,\n        \"gender\": true,\n        \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n        \"UpdatedAt\": \"2022-11-09T23:27:36.9333765+07:00\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "show gorilla",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "show gorilla",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 09 Nov 2022 16:13:57 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "157"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ID\": 1,\n    \"name\": \"Harambe\",\n    \"age\": 21,\n    \"weight\": 150,\n    \"gender\": true,\n    \"CreatedAt\": \"2022-11-09T23:13:23.9954508+07:00\",\n    \"UpdatedAt\": \"2022-11-09T23:13:23.9954508+07:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete Gorilla",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/delete/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete Gorilla",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/delete/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"delete",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 09 Nov 2022 16:28:37 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "122"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ID\": 0,\n    \"name\": \"\",\n    \"age\": 0,\n    \"weight\": 0,\n    \"gender\": false,\n    \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n    \"UpdatedAt\": \"0001-01-01T00:00:00Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update Gorilla",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":2,\r\n    \"name\":\"Harambe Jr (Updated)\",\r\n    \"age\":15,\r\n    \"weight\":99,\r\n    \"gender\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/edit",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"edit"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update Gorilla",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"name\":\"Harambe Jr (Updated)\",\r\n    \"age\":15,\r\n    \"weight\":99,\r\n    \"gender\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/edit",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"edit"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 09 Nov 2022 16:27:36 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "156"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ID\": 2,\n    \"name\": \"Harambe Jr (Updated)\",\n    \"age\": 15,\n    \"weight\": 99,\n    \"gender\": true,\n    \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n    \"UpdatedAt\": \"2022-11-09T23:27:36.9333765+07:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add gorrilla",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Harambe\",\r\n    \"age\":21,\r\n    \"weight\":150,\r\n    \"gender\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add gorrilla",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Harambe The 3rd\",\r\n    \"age\":4,\r\n    \"weight\":30,\r\n    \"gender\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"add"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 09 Nov 2022 16:13:45 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "163"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ID\": 3,\n    \"name\": \"Harambe The 3rd\",\n    \"age\": 4,\n    \"weight\": 30,\n    \"gender\": true,\n    \"CreatedAt\": \"2022-11-09T23:13:45.9011665+07:00\",\n    \"UpdatedAt\": \"2022-11-09T23:13:45.9011665+07:00\"\n}"
+				}
+			]
+		}
+	]
+}
