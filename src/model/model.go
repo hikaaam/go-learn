@@ -7,17 +7,20 @@ import (
 	"gorm.io/gorm"
 )
 
-func DB() *gorm.DB {
-	db, err := gorm.Open(sqlite.Open("mysqlitedatabase.db"), &gorm.Config{})
+var DB *gorm.DB
+
+func CreateConnection() *gorm.DB {
+	conn, err := gorm.Open(sqlite.Open("mysqlitedatabase.db"), &gorm.Config{})
 	if err != nil {
 		panic("failed to connect database")
 	}
-	return db
+	DB = conn
+	return conn
 }
 
-func Migrations() {
+func Migrations(conn *gorm.DB) {
 	// Migrate the schema
-	DB().AutoMigrate(Gorilla{})
+	conn.AutoMigrate(Gorilla{})
 }
 
 //Gorilla Table

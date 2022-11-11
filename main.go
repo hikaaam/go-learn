@@ -11,7 +11,8 @@ import (
 
 func main() {
 	// run database migrations
-	model.Migrations()
+	conn := model.CreateConnection()
+	model.Migrations(conn)
 
 	//API router
 	r := mux.NewRouter()
